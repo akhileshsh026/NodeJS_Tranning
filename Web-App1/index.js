@@ -2,19 +2,23 @@
 
 var http = require('http');
 var express = require('express');
+const fs = require('fs');
+
+const configJSON = fs.readFileSync('./config.json');
+const config = JSON.parse(configJSON);
 
 const app = express();
 
-app.use(express.static('www'));
+app.use(express.static(config.webServer.folder));
 
 const httpServer = http.createServer(app);
 
-httpServer.listen(3000,function(err){
+httpServer.listen(config.webServer.port,function(err){
     if(err)
         {
             console.log(err.message);
             return;
         }
 
-    console.log('server listing on 3000');
+    console.log(`server listing on ${config.webServer.port}`);
 })
