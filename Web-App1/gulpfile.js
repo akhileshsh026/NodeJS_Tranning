@@ -4,5 +4,5 @@ var gulp = require('gulp');
 
 gulp.task('default', function(){
 
-    console.log('1st program of gulp ');
+    console.log('1st program of gulps ');
 })
