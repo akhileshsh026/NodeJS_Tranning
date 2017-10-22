@@ -12,6 +12,7 @@
   "author": "AkhileshKS",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.16.2"
+    "express": "^4.16.2",
+    "gulp": "^3.9.1"
   }
 }

@@ -8,6 +8,6 @@ app.get('/',function(req,res){
         res.send('Welcome to my APi');
 });
 
-app.listen(port,function(){
-    console.log('listing on port'+port);
+app.listen(port,function(err){
+    console.log('server listing on port' + port);
 })
