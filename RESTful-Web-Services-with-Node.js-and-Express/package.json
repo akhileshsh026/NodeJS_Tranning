@@ -1,0 +1,17 @@
+{
+  "name": "bookapi",
+  "version": "1.0.0",
+  "description": "RESTful Web Services with Node.js and Express from pluralsight",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "bookapi"
+  ],
+  "author": "AkhileshKS",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}
