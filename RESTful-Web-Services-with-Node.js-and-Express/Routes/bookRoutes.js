@@ -4,7 +4,7 @@ var routes = function(Book){
 
     var bookrouter = express.Router();
     
-    bookrouter.route('/Books')
+    bookrouter.route('/')
        .post(function(req,res){
          var book = new Book(req.body);
          console.log(book);
@@ -27,7 +27,7 @@ var routes = function(Book){
         
       });
     
-    bookrouter.route('/Books/:bookID')
+    bookrouter.route('/:bookID')
     .get(function(req,res){
     
       Book.findById(req.params.bookID,function(err,book){
@@ -35,9 +35,26 @@ var routes = function(Book){
             res.status(500).send(err);
         else
             res.json(book); 
-           });
-    
-          });       
+           })
+       })
+       .put(function(req,res){
+        Book.findById(req.params.bookID,function(err,book)
+        {
+         if(err)
+           res.status(500).send(err);
+            else
+               console.log(req.body.title);
+               book.title = req.body.title;
+               book.auther = req.body.auther;
+               book.genre = req.body.genre;
+               book.read = req.body.read;
+       
+               book.save();
+               res.json(book); 
+             });   
+          
+          });
+           
     
 return bookrouter;    
 
