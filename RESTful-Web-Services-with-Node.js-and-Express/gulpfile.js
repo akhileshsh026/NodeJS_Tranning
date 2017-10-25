@@ -20,7 +20,7 @@ gulp.task('default',function(){
 });
 
 gulp.task('test',function(){
-    env({vars:{ENV:'Test'}});
+    env({vars:{ENV:'Test'}});           
     gulp.src('tests/*.js',{read:false})
     .pipe(gulpMocha({reporter:'nyan'}))
 });
