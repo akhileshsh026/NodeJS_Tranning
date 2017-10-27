@@ -1,0 +1,19 @@
+{
+  "name": "nodejstranning",
+  "version": "1.0.0",
+  "description": "Node Tranning from mongoDB Univercity",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/akhileshsh026/NodeJS_Tranning/"
+  },
+  "keywords": [
+    "node.js",
+    "packages"
+  ],
+  "author": "Akhilesh Kumar Sahu",
+  "license": "MIT"
+}
