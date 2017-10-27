@@ -3,12 +3,12 @@ var express = require('express'),
     engines = require('consolidate');  // is for templete engine rest all things taken acre by this .
 
     app.engine('html',engines.nunjucks);
-    app.set('view engine',' html');
-    app.set('Views',__dirname + '/Views');
+    app.set('view engine','html');
+    app.set('views',__dirname + '/views');
 
 
     app.get('/',function (req,res){
-                 res.render('hello ' + {'name': 'templetes' })
+                 res.render('hello ' + {'name': 'templetes' });
         })
 
     app.get(function (req,res) {
