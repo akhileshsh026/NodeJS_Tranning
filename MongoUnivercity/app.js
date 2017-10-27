@@ -4,6 +4,7 @@ var MongoClient = require('mongodb').MongoClient,
   
 MongoClient.connect('mongodb://localhost:27017/video',function(err,db){
 
+ // The assert module provides a simple set of assertion tests that can be used to test invariants.
 assert.equal(null,err);
 console.log('SucessFully Connected to Server');
 
