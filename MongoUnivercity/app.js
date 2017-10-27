@@ -1,21 +1,16 @@
-var MongoClient = require('mongodb').MongoClient,
-   assert = require('assert');
+var express = require('express'),
+ app = express();
 
-  
-MongoClient.connect('mongodb://52.187.19.241:27017/dimentionx',function(err,db){
 
- // The assert module provides a simple set of assertion tests that can be used to test invariants.
-assert.equal(null,err);
-console.log('SucessFully Connected to Server');
+ app.get('/',function(req,res){
+    res.send('Hello Friend all good');
+ });
 
-          // find docs in mongo
-   db.collection('employes').find({}).toArray(function(err,docs){
-          docs.forEach(function(doc){
-            console.log(doc.name);
-          });
+ app.use(function(req,res){
+       res.sendStatus(404);
+ });
 
-          db.close();
-   });
-
-      console.log('find() colled');
-})
+ var server = app.listen(8000,function(){
+         // var port = server.address.port;
+     console.log('server is listing at 8000');
+ })
