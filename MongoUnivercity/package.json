@@ -15,5 +15,9 @@
     "packages"
   ],
   "author": "Akhilesh Kumar Sahu",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.2",
+    "mongodb": "^2.2.33"
+  }
 }
