@@ -1,0 +1,26 @@
+{
+  "name": "findandcursors",
+  "version": "3.0.0",
+  "description": "mongodb find() command and cursors working .",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akhileshsh026/NodeJS_Tranning.git"
+  },
+  "keywords": [
+    "Find()",
+    "Cursors"
+  ],
+  "author": "Akhilesh Kumar Sahu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/akhileshsh026/NodeJS_Tranning/issues"
+  },
+  "homepage": "https://github.com/akhileshsh026/NodeJS_Tranning#readme",
+  "dependencies": {
+    "mongodb": "^2.2.33"
+  }
+}

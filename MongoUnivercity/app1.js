@@ -1,10 +1,10 @@
 var express = require('express'),
   app = express(),  // web framework for hanling routing request
-  cons = require('consolidate');  // templeting liberary adopter for  express
+  engines = require('consolidate');  // templeting liberary adopter for  express
 
-  app.engine('html',cons.nunjuncks);
-  app.set('view engine','html');
-  app.set('views',__dirname +'/views');
+  app.engine('html',engines.nunjuncks);
+  app.set('view engine', 'html');
+  app.set('views',__dirname + '/views');
   
 
   //handler for internal server error
