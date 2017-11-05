@@ -11,9 +11,8 @@ var query = {"founded_year": 2010};
 
 var cursor = db.collection('Companies').find(query);
 
-/* TODO: Write your line of code here. */
-var projections = {"number_of_employees":1,"name":1,"_id":0};
-cursor.project(projections);
+var projections = {"number_of_employees":1,"name":1,"_id":0};  
+cursor.project(projections); // or cursor.project({"number_of_employees":1,"name":1,"_id":0}); 
 
 cursor.forEach(
     function(doc) {
