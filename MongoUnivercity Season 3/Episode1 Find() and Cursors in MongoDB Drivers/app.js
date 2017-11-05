@@ -7,15 +7,16 @@ MongoClient.connect('mongodb://52.187.19.241:27017/CrunchDB',function(err,db){
     console.log("Connected Sucessfully");
 
     var Query = {"category_code":"biotech"};
+    var projection = {"name":1,"category_code":1,"_id":0};
+    
     var Cursor = db.collection('Companies').find(Query);
-         
-        assert.equal(err,null);
-        assert.notEqual(Cursor.length,0);
+    Cursor.project(projection); 
 
         Cursor.forEach(
-            function(doc){
-            console.log(doc.name+'is a'+doc.category_code+" Company.");
-                         },
+                function(doc)
+                {
+                    console.log(doc.name+' is a '+doc.category_code+" Company.");
+                },
                   function(err)
                   {
                       assert.equal(err,null);
