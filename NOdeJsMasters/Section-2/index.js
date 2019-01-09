@@ -9,8 +9,12 @@ var server = http.createServer(function (req,res) {
     // getting quesy string
     var queryString = parseurl.query;
 
+    // get the headers as an object
+    var headervar = req.headers;
+
     res.end('Hello World \n');
-    console.log('Request receved in path: ' + trimedPath + ', With Method :' + method + ', With these query strings :' , queryString);
+    // console.log('Request receved in path: ' + trimedPath + ', With Method :' + method + ', With these query strings :' , queryString);
+    console.log('Req receved with these headers : ' , headervar);
 });
 
 server.listen(3000,function () {
