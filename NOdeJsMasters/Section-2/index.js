@@ -6,8 +6,11 @@ var server = http.createServer(function (req,res) {
     var path = parseurl.pathname;
     var trimedPath = path.replace(/^\/+|\/+$/g,'');
     var method = req.method.toLowerCase();
+    // getting quesy string
+    var queryString = parseurl.query;
+
     res.end('Hello World \n');
-    console.log('Request receved in path: ' + trimedPath + ' With Method :' + method);
+    console.log('Request receved in path: ' + trimedPath + ', With Method :' + method + ', With these query strings :' , queryString);
 });
 
 server.listen(3000,function () {
